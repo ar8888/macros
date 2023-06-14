@@ -1,0 +1,6 @@
+﻿<xml xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:x="urn:schemas-microsoft-com:office:excel">
+	<v:shapetype id="_x0000_t202" coordsize="21600,21600" path="m,l,21600r21600,l21600,xe" o:spt="202">
+		<v:stroke joinstyle="miter"/>
+		<v:path o:connecttype="rect" gradientshapeok="t"/>
+	</v:shapetype>
+</xml>
