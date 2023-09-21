@@ -36,10 +36,10 @@ class Macros:
         if (self.col_name in self.data.columns) is False:
             self.message_box.emit(f'Не найдена колонка {self.col_name} в загруженном файле')
             return False
-        if self.type_out == "one":
-            self.save_one_file()
-        else:
+        if self.type_out == "many":
             self.save_many_files()
+        else:
+            self.save_one_file()
         self.data = None
         return True
 
@@ -118,7 +118,7 @@ class Macros:
                     break
         # записываем данные в файл
         # name_file = " ".join(list_manuf)
-        file_result = f"{self.folder_out}/{self.file_in_name} & результат.xlsx"
+        file_result = self.type_out
         writer = pandas.ExcelWriter(file_result, engine='xlsxwriter', date_format=r'dd.mm.yyyy',
                                     datetime_format=r'dd.mm.yyyy HH:MM:SS')
         select_ = self.data[self.data.manuf == 'Отбор']

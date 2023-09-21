@@ -162,7 +162,8 @@ class Window(QMainWindow):
         if self.rb_many_file.isChecked() is True:
             self.options['type_out'] = 'many'
         else:
-            self.options['type_out'] = 'one'
+            tmp = QtWidgets.QFileDialog.getSaveFileName(self, "Выберите файл", "", "Excel files (*.xlsx)")
+            self.options['type_out'] = tmp[0]
         #2
         if self.options['file_in'] == '':
             self.txt_logs.append('Выберите файл')
